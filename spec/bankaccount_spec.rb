@@ -12,5 +12,9 @@ describe BankAccount do
     expect(my_account.add_money(5)).to eq(10)
   end
 
+  it "removes money from account" do
+    my_account = BankAccount.new(100)
+    expect(my_account.withdraw_money(50)).to eq(50)
+  end
 
 end
