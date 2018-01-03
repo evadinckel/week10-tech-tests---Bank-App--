@@ -12,16 +12,16 @@ def balance
   @balance
 end
 
-def print_money(some_money)
-  return some_money
+def print_balance
+  return @balance
 end
 
 def add_money(money)
-  @balance + money
+  @balance += money
 end
 
 def withdraw_money(money)
-  @balance - money
+  @balance -= money
 end
 
 end
