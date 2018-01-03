@@ -1,8 +1,8 @@
 # Makers Academy Week 10 - Tech Tests
 
-Bank App
+### Bank App
 
-
+```
 Specification / Requirements
 
 You should be able to interact with your code via a REPL like IRB or the JavaScript console. (You don't need to implement a command line interface that takes input from STDIN.)
@@ -22,8 +22,9 @@ date || credit || debit || balance
 13/01/2012 || 2000.00 || || 3000.00
 10/01/2012 || 1000.00 || || 1000.00
 
+```
 
-To get started, I have decided to break these specs down to 3 simple user stories.
+#### To get started, I have decided to break these specs down to 3 simple user stories.
 
 ```
 As a user,
