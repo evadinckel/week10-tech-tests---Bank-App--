@@ -1,30 +1,17 @@
 class Transaction
 
-attr_reader :date
+attr_reader :date, :balance, :net_balance, :value
 
-  def initialize(date = 0)
-    @date = date
+  def initialize(balance_integer, value_integer)
+    @gross_balance = balance_integer
+    @date = Time.now
+    @value = value_integer
+    @net_balance = calculate_net_balance
   end
 
-def date
-  @date
-end
+  private
 
-# def credit
-#   @credit
-# end
-#
-# def debit
-#   @debit
-# end
-#
-# def balance
-#   @balance
-# end
-
-def transaction_date()
-  return @date
-end
-
-
+  def calculate_net_balance
+    @gross_balance + @value
+  end
 end

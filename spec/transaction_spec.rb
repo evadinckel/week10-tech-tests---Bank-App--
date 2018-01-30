@@ -5,11 +5,17 @@ require './lib/bankaccount.rb'
 
 describe Transaction do
 
-it "includes the date of each transaction" do
+it "includes the date when created" do
     my_account = Bankaccount.new(2000)
-    new_transaction = Transaction.new('14/01/2012')
-    expect(new_transaction.transaction_date('14/01/2012')).to eq ('14/01/2012')
+    new_transaction = Transaction.new
+    expect(new_transaction).to eq(nil)
   end
+
+ it "shows the credit on balance after adding some money" do
+   my_account = Bankaccount.new(2000)
+   new_transaction = Transaction.new
+   expect(new_transaction.show_credit).to eq(2000)
+ end
 
 
 end
