@@ -21,9 +21,10 @@ attr_reader :balance, :transaction_history
     @transaction_history.push(Transaction.new(@balance, value))
     @balance += value
   end
-  #
-  # def withdraw_money(money)
-  #   @balance -= money
+
+  # def withdraw_money(value)
+  #  @transaction_history.pop(Transaction.new(@balance, value))
+  #  @balance -= value
   # end
 
 end

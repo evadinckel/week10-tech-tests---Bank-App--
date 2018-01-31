@@ -1,21 +1,21 @@
 require './lib/bankaccount.rb'
 
 
-describe Bankaccount do
+describe BankAccount do
 
   it "contains the customer's money" do
-    my_account = Bankaccount.new(5)
-    expect(my_account.print_balance).to eq 5
+    my_account = BankAccount.new(8000)
+    expect(my_account.balance).to eq(8000)
   end
 
   it "adds money to account after each transaction" do
-    my_account = Bankaccount.new(5)
-    expect(my_account.add_money(5)).to eq(10)
+    my_account = BankAccount.new(6000)
+    expect(my_account.new_transaction(1000)).to eq(7000)
   end
 
   it "removes money from account" do
-    my_account = Bankaccount.new(100)
-    expect(my_account.withdraw_money(50)).to eq(50)
+    my_account = BankAccount.new(1000)
+    expect(my_account.new_transaction(-500)).to eq(500)
   end
 
 end
